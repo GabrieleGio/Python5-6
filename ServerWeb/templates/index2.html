@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ciao a tutti</title>
+    </head>
+    <style>
+
+        /* Add some basic styling to make the page look better */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            text-align: center;
+
+        }
+
+        #container {
+
+            width: 80%;
+
+            margin: 40px auto;
+
+            padding: 20px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        h1 {
+
+            color: #333;
+
+            margin-bottom: 20px;
+
+        }
+
+        p {
+
+            margin-bottom: 10px;
+
+        }
+
+        span {
+
+            font-weight: bold;
+
+        }
+
+        button {
+
+            background-color: #4CAF50;
+
+            color: #fff;
+
+            padding: 10px 20px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #3e8e41;
+
+        }
+
+    </style>
+    <body>
+        <center>
+        <h1>Dati Inseriti:</h1>
+
+  <div id="container">
+
+    <p>Nome: <span id="nome">{{ nome }}</span></p>
+
+    <p>Cognome: <span id="cognome">{{ cognome }}</span></p>
+
+    <p>Password: <span id="password">{{ password }}</span></p>
+
+    <p>Sesso: <span id="sesso">{{ sesso }}</span></p>
+
+    <p>Numero: <span id="numero">{{ numero }}</span></p>
+
+  </div>
+
+  <h1>Torna alla home:</h1>
+            <h1>
+                <a href="/">
+                    <button>Home</button>
+                </a>
+            </h1>
+
+        </center>
+    </body>
+</html>
