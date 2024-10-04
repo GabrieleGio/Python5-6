@@ -34,11 +34,13 @@ def index2():
     password = request.args.get("password")
     sesso = request.args.get("sesso")
     numero = request.args.get("numero")
+    
     with open('utenti.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
         next(reader)
         utenti = list(reader)
-        
+
+    #Questa parte va sistemata
     for utente in utenti:
         if utente[0] == nome and utente[2] == password:
             print("Match found!")

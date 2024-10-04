@@ -1,0 +1,32 @@
+{
+    "dfrcde23t44h501u": {
+        "nome": "Mario",
+        "cognome": "Retti",
+        "data di nascita": "22/05/2010",
+        "codice_fiscale": "dfrcde23t44h501u"
+    },
+    "bfrcde23t44h501a": {
+        "nome": "Bob",
+        "cognome": "Reynolds",
+        "data di nascita": "04/03/1990",
+        "codice_fiscale": "bfrcde23t44h501a"
+    },
+    "gsecde23t44h501u": {
+        "nome": "Giuseppe",
+        "cognome": "Verdi",
+        "data di nascita": "12/06/2000",
+        "codice_fiscale": "gsecde23t44h501u"
+    },
+    "abc": {
+        "nome": "Mario",
+        "cognome": "Giordano",
+        "data di nascita": "12/02/2002",
+        "codice_fiscale": "abc"
+    },
+    "a": {
+        "nome": "Mario",
+        "cognome": "Sturniolo",
+        "data di nascita": "1/01/2001",
+        "codice_fiscale": "a"
+    }
+}
