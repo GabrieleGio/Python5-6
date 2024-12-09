@@ -28,5 +28,11 @@
         "cognome": "Sturniolo",
         "data di nascita": "1/01/2001",
         "codice_fiscale": "a"
+    },
+    "prova": {
+        "nome": "prova",
+        "cognome": "prova",
+        "data di nascita": "1/01/2000",
+        "codice_fiscale": "prova"
     }
 }

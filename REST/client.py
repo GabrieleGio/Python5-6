@@ -2,7 +2,7 @@
 import requests, json, sys
 
 
-base_url = "https://172.20.140.152:8080"
+base_url = "https://127.0.0.1:8080"
 
 
 def GetDatiCittadino():
@@ -80,33 +80,79 @@ while True:
 
 
     if sOper == 1:
-        print("Aggiunta cittadino")
-        api_url = base_url + "/add_cittadino"
-        jsonDataRequest = GetDatiCittadino()
+        #Autenticazione
+        print("Login utente")
+        api_url = base_url + "/login_utente"
+        jsonDataRequest = GetDatiAdmin()
         response = requests.post(api_url, json=jsonDataRequest, verify=False)
-
+        jsonResp = response.json()
+        login = jsonResp["login"]
+        if login == True:
+            print("Aggiunta cittadino")
+            api_url = base_url + "/add_cittadino"
+            jsonDataRequest = GetDatiCittadino()
+            response = requests.post(api_url, json=jsonDataRequest, verify=False)
+            print(response.json())
+        else:
+            print(response.json())
+            continue
+        #--------------
+    
     # Richiesta dati cittadino
     elif sOper == 2:
-        print("Richiesta dati cittadino")
-        api_url = base_url + "/read_cittadino"
-        jsonDataRequest = GetCodicefiscale()
-        response = requests.get(api_url + "/" + jsonDataRequest['codice_fiscale'], verify=False)
-        print(response.json())
+        #Autenticazione
+        print("Login utente")
+        api_url = base_url + "/login_utente"
+        jsonDataRequest = GetDatiAdmin()
+        response = requests.post(api_url, json=jsonDataRequest, verify=False)
+        jsonResp = response.json()
+        login = jsonResp["login"]
+        if login == True:
+            print("Richiesta dati cittadino")
+            api_url = base_url + "/read_cittadino"
+            jsonDataRequest = GetCodicefiscale()
+            response = requests.get(api_url + "/" + jsonDataRequest['codice_fiscale'], verify=False)
+            print(response.json())
+        else:
+            print(response.json())
+            continue
 
     elif sOper == 3:
-        print("Modifica cittadino")
-        api_url = base_url + "/update_cittadino"
-        jsonDataRequest = GetDatiCittadino()
+        #Autenticazione
+        print("Login utente")
+        api_url = base_url + "/login_utente"
+        jsonDataRequest = GetDatiAdmin()
         response = requests.post(api_url, json=jsonDataRequest, verify=False)
-        print(response.json())
+        jsonResp = response.json()
+        login = jsonResp["login"]
+        if login == True:
+            print("Modifica cittadino")
+            api_url = base_url + "/update_cittadino"
+            jsonDataRequest = GetDatiCittadino()
+            response = requests.post(api_url, json=jsonDataRequest, verify=False)
+            print(response.json())
+        else:
+            print(response.json())
+            continue
 
 
     elif sOper == 4:
-        print("Eliminazione cittadino")
-        api_url = base_url + "/elimina_cittadino"
-        jsonDataRequest = GetCodicefiscale()
+        #Autenticazione
+        print("Login utente")
+        api_url = base_url + "/login_utente"
+        jsonDataRequest = GetDatiAdmin()
         response = requests.post(api_url, json=jsonDataRequest, verify=False)
-        print(response.json())
+        jsonResp = response.json()
+        login = jsonResp["login"]
+        if login == True:
+            print("Eliminazione cittadino")
+            api_url = base_url + "/elimina_cittadino"
+            jsonDataRequest = GetCodicefiscale()
+            response = requests.post(api_url, json=jsonDataRequest, verify=False)
+            print(response.json())
+        else:
+            print(response.json())
+            continue
 
 
     elif sOper == 5:
